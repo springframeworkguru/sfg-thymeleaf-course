@@ -136,7 +136,7 @@
 <div class="jumbotron">
     <div class="container">
         <h1>Spring Framework Guru</h1>
-        <p class="lead">Online Courses for Spring Framework</p>
+        <p class="lead" th:text="#{index.courses.tagline}">Online Courses for Spring Framework</p>
     </div>
 </div>
 
@@ -172,7 +172,7 @@
 
     <div class="row">
         <div class="col-md-offset-6 col-md-4">
-            <button class="btn-success">Buy Now!</button>
+            <button class="btn-success" th:text="#{button.buy.now}">Buy Now!</button>
         </div>
     </div>
 </div>
