@@ -167,7 +167,7 @@
                     </div>
                 </div>
                 <div class="col-xs-4">
-                    <div class="small course-price" th:text="${product.price}">
+                    <div class="small course-price" th:text="${product.price > 0 ? '$' + product.price : 'FREE'}">
                         $PRICE
                     </div>
                 </div>
