@@ -143,21 +143,21 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <h1>Spring Framework Guru - Course Name</h1>
+            <h1 th:text="${product.courseName}">Spring Framework Guru - Course Name</h1>
         </div>
     </div>
     <div class="row">
         <div class="col-md-6">
 
                 <img src="../static/images/SpringIntroThumb.png"
-                     th:src="@{images/SpringIntroThumb.png}"
+                     th:src="@{/images/SpringIntroThumb.png}"
                      class="center-block"/>
 
         </div>
         <div class="col-md-6">
              <div>
-                 <h2>Course Title</h2>
-                 <p>Adipiscing magna vestibulum fringilla tristique ad a primis ante mi inceptos condimentum curabitur
+                 <h2 th:text="${product.courseSubtitle}">Course Title</h2>
+                 <p th:text="${product.courseDescription}">Adipiscing magna vestibulum fringilla tristique ad a primis ante mi inceptos condimentum curabitur
                      curabitur eu sed nullam ridiculus nunc montes id nostra dui inceptos scelerisque posuere ipsum mus.
                      A scelerisque libero viverra eu condimentum mollis suscipit mi consectetur semper dis ipsum nisi
                      in nullam aliquet iaculis in eros euismod bibendum. Adipiscing volutpat fringilla bibendum duis a
