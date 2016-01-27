@@ -140,18 +140,37 @@
     </div>
 </div>
 
-<div class="container">
+<div class="container" style="height: 100vh;">
     <div class="row">
         <div class="col-md-12">
             <h1 th:text="${product.courseName}">Spring Framework Guru - Course Name</h1>
         </div>
     </div>
-    <div class="row">
+    <div class="row course-listing">
         <div class="col-md-6">
-
-                <img src="../static/images/SpringIntroThumb.png"
-                     th:src="@{/images/SpringIntroThumb.png}"
-                     class="center-block"/>
+           <div class="row">
+               <div class="col-md-12">
+                   <img src="../static/images/SpringIntroThumb.png"
+                        th:src="@{/images/SpringIntroThumb.png}"
+                        class="center-block"/>
+               </div>
+           </div>
+            <div class="row course-listing-extra-info col-xs-12">
+                <div class="col-xs-8">
+                    <img align="left" alt="John Thompson"
+                         src="../static/images/instructor_jt.jpg"
+                         th:src="@{/images/instructor_jt.jpg}"
+                         class="img-circle"/>
+                    <div class="small course-author-name">
+                        Author Name
+                    </div>
+                </div>
+                <div class="col-xs-4">
+                    <div class="small course-price">
+                        $PRICE
+                    </div>
+                </div>
+            </div>
 
         </div>
         <div class="col-md-6">
