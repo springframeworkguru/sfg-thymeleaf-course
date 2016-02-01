@@ -5,10 +5,10 @@
     <title th:text="#{index.page.title}">Page Title</title>
 
     <link href="../static/css/bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet" media="screen"
-            th:href="@{/css/bootstrap-3.3.4-dist/css/bootstrap.min.css}"/>
+          th:href="@{/css/bootstrap-3.3.4-dist/css/bootstrap.min.css}"/>
 
     <script src="../static/js/jquery-2.1.4.min.js"
-          th:src="@{/js/jquery-2.1.4.min.js}"></script>
+            th:src="@{/js/jquery-2.1.4.min.js}"></script>
 
     <link th:href="@{/css/custom.css}" rel="stylesheet" media="screen"/>
 
@@ -146,16 +146,29 @@
         </div>
     </div>
 
-    <table>
-        <tr>
-            <th>ID</th>
-            <th>Name</th>
-        </tr>
-        <tr th:each="product : ${products}">
-            <td th:text="${product.id}"></td>
-            <td th:text="${product.courseName}"></td>
-        </tr>
-    </table>
+    <div class="row course-list list">
+        <div class='row course-list list'>
+            <div th:each="product,it : ${products}">
+                <div th:if="${(it.count gt 0 and it.count lt 4)}">
+                    <div th:replace="fragments/productdiv :: productdiv">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row course-list list">
+        <div class='row course-list list'>
+            <div th:each="product,it : ${products}">
+                <div th:if="${(it.count gt 3 and it.count lt 7)}">
+                    <div th:replace="fragments/productdiv :: productdiv">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <div class="row course-list list" th:remove="all">
         <div class="col-md-4">
@@ -274,7 +287,7 @@
         </div>
     </div>
 
-    <div class="row" th:remove="all">
+    <div class="row course-list list" th:remove="all">
         <div class="col-md-4">
             <div class="course-listing">
                 <div class="row">
@@ -391,7 +404,7 @@
 </div>
 
 <div class="container" th:replace="fragments/footer :: footer">
-<p>footer</p>
+    <p>footer</p>
 </div>
 
 </body>
