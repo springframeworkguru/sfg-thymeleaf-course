@@ -173,10 +173,11 @@
                 </div>
             </div>
             <div class="row col-xs-12">
-                <ol class="breadcrumb">
-                    <li><a href="#">Cat 1</a></li>
-                    <li><a href="#">Cat 2</a></li>
-                    <li><a href="#">Cat 3</a></li>
+                <ol class="breadcrumb" >
+                    <li th:each="productCategory : ${product.productCategories}">
+                        <a href="#" th:text="${productCategory.category}">Cat 1</a></li>
+                    <li th:remove="all"><a href="#">Cat 2</a></li>
+                    <li th:remove="all"><a href="#">Cat 3</a></li>
                 </ol>
             </div>
         </div>
