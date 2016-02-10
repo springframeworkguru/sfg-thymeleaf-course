@@ -154,13 +154,13 @@
         </div>
     </div>
 
-    <div class="row" sec:authorize="isAuthenticated()">
+    <div class="row" sec:authorize="hasRole('ROLE_ADMIN')">
         <div class="col-md-10 col-md-offset-2">
             <h2>User Has Role Admin</h2>
         </div>
     </div>
 
-    <div class="row" sec:authorize="isAuthenticated()">
+    <div class="row" sec:authorize="hasRole('ROLE_USER')">
         <div class="col-md-10 col-md-offset-2">
             <h2>User Has Role User</h2>
         </div>
