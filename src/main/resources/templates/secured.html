@@ -145,6 +145,7 @@
     <div class="row" sec:authorize="isAuthenticated()">
         <div class="col-md-10 col-md-offset-2">
             <h2 style="color:green">User is Logged In</h2>
+            <p sec:authentication="principal.username">userName</p>
         </div>
     </div>
 
