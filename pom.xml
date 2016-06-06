@@ -63,8 +63,26 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+			<plugin>
+				<groupId>io.fabric8</groupId>
+				<artifactId>docker-maven-plugin</artifactId>
+				<version>0.15.3</version>
+				<configuration>
+					<dockerHost>http://127.0.0.1:2375</dockerHost>
+					<verbose>true</verbose>
+					<images>
+						<image>
+							<name>springframeworkguru/masteringthymeleaf</name>
+							<build>
+								<dockerFile>Dockerfile</dockerFile>
+								<assembly>
+									<descriptorRef>artifact</descriptorRef>
+								</assembly>
+							</build>
+						</image>
+					</images>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
-	
-
 </project>
