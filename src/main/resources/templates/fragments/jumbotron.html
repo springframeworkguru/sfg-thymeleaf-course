@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title th:text="#{index.page.title}">Page Title</title>
+
+    <link href="../../static/css/bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet" media="screen"
+          th:href="@{/css/bootstrap-3.3.4-dist/css/bootstrap.min.css}"/>
+
+    <script src="../../static/js/jquery-2.1.4.min.js"
+            th:src="@{/js/jquery-2.1.4.min.js}"></script>
+
+    <link th:href="@{/css/custom.css}" rel="stylesheet" media="screen"/>
+
+    <style th:remove="all">
+        .jumbotron {
+            background: url('../../static/images/SpringCoreJumbotron.jpg') no-repeat center center;
+            height: 350px;
+            color: white;
+            text-shadow: #444 0 1px 1px;
+        }
+
+        body {
+            color: #2b3636;
+            font-family: "Proxima";
+        }
+
+        body {
+            color: #333;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.42857;
+        }
+
+        .row {
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+
+        *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        .view-directory .course-listing {
+            background-color: rgba(255, 255, 255, 0.7);
+        }
+
+        .course-listing {
+            background-color: #f7f7f7;
+            border: 1px solid #f1f3f0;
+            border-radius: 9px;
+            box-shadow: 0 1px #f1f3f0;
+            cursor: pointer;
+            height: 390px;
+            margin-bottom: 50px;
+            padding: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .course-listing .course-box-image-container {
+            max-height: 208px;
+            overflow: hidden;
+        }
+
+        .course-listing .course-box-image-container .course-box-image {
+            border-bottom: 1px solid #ededed;
+            border-top-left-radius: 9px;
+            border-top-right-radius: 9px;
+            display: block;
+            margin: auto;
+            width: 100%;
+        }
+
+        img {
+            vertical-align: middle;
+        }
+
+        img {
+            border: 0 none;
+        }
+
+        .course-listing .course-listing-title {
+            color: #6cb44a;
+            font-size: 18px;
+            font-weight: bold;
+            line-height: 25px;
+            max-height: 70px;
+            overflow: hidden;
+            padding: 16px 16px 4px;
+        }
+
+        .course-listing .course-listing-subtitle {
+            color: #586f6f;
+            font-size: 14px;
+            font-weight: 200;
+            max-height: 65px;
+            overflow: hidden;
+            padding: 5px 16px;
+        }
+
+        .course-listing .course-listing-extra-info .course-price {
+            color: #6eae50 !important;
+            font-size: 15px;
+            font-weight: bold;
+            line-height: 34px;
+            padding-right: 10px;
+            text-align: right;
+        }
+
+        .course-listing .course-listing-extra-info .course-author-name {
+            font-size: 15px;
+            font-weight: 200;
+            line-height: 30px;
+            max-height: 30px;
+            overflow: hidden;
+            padding-left: 5px;
+        }
+
+        .course-listing .course-listing-extra-info .course-bundle {
+            font-size: 15px;
+            font-weight: 200;
+            line-height: 30px;
+        }
+    </style>
+
+</head>
+<body>
+<div class="jumbotron" th:fragment="jumbotron">
+    <div class="container">
+        <h1>Spring Framework Guru</h1>
+        <p class="lead" th:text="#{index.courses.tagline}">Tag line</p>
+    </div>
+</div>
+
+</body>
+</html>
