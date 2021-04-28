@@ -8,10 +8,46 @@
 
 </head>
 <body>
-    <h1>This is a heading</h1>
-    <h2>this is heading 2</h2>
-    <p class="text-danger">This is a paragraph</p>
 
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>This is a heading</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h2>this is heading 2</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <p style="color: red">This is a paragraph</p>
+            </div>
+            <div class="col-md-6">
+                <p style="color: red">This is a different one!</p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6" style="background: gray">
+                <div class="row">
+                    <div class="col-md-6" style="background: blueviolet">
+                        <p>asdf</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p>asqweqwedf</p>
+                    </div>
+                </div>
+                <p style="color: red">This is a paragraph</p>
+
+            </div>
+            <div class="col-md-6" style="background: green">
+                <p style="color: red">This is a different one!</p>
+            </div>
+        </div>
+
+    </div>
     <script th:src="@{/js/bootstrap.bundle.js}"></script>
 </body>
 </html>
