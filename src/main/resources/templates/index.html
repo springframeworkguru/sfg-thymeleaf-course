@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 
-    <link href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
+    <link th:href="@{/css/bootstrap.css}" rel="stylesheet"/>
 
-    <script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"></script>
 </head>
 <body>
-<h1>This is a heading</h1>
-<h2>this is heading 2</h2>
-<p style="color: red">This is a paragraph</p>
+    <h1>This is a heading</h1>
+    <h2>this is heading 2</h2>
+    <p class="text-danger">This is a paragraph</p>
+
+    <script th:src="@{/js/bootstrap.bundle.js}"></script>
 </body>
 </html>
